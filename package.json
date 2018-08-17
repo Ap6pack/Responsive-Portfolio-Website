@@ -1,0 +1,22 @@
+{
+  "name": "responsive-portfolio-website",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ap6pack/Responsive-Portfolio-Website.git"
+  },
+  "author": "Adam Rhys Heaton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ap6pack/Responsive-Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/Ap6pack/Responsive-Portfolio-Website#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
