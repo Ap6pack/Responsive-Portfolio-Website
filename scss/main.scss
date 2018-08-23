@@ -7,7 +7,7 @@
 body {
     @include background;
     background: $primary-color;
-    color: set-text-color$primary-color;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -48,7 +48,6 @@ header {
 main {
     padding: 4rem; // height: 100%;
     min-height: calc(100vh - 60px);
-    color: #fff;
     .icons {
         margin-top: 1rem;
         a {
@@ -96,7 +95,9 @@ main {
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
     }
-} // Work/Projects
+}
+
+// Work/Projects
 .projects {
     display: grid;
     grid-gap: 0.7rem;
@@ -110,7 +111,33 @@ main {
             @include easeOut;
         }
     }
-} // Button Styles
+}
+
+// Contact Page
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+}
+
+// Button Styles
 .btn {
     display: block;
     padding: 0.5rem 1rem;
@@ -137,8 +164,8 @@ main {
 #main-footer {
     text-align: center;
     padding: 1rem;
-    background: #2b2b2b;
-    color: #fff;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
     height: 60px;
 }
 
